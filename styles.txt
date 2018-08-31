@@ -1,0 +1,179 @@
+body{
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    line-height: 1;
+}
+
+#logo{
+    float: left;
+    margin-left: 25px;
+    width: 50%;
+    margin-top: 5px;
+}
+#topbar{
+    width: 100%;
+    height: 20%;
+    color: white;
+    font-size: 17pt;
+    color: black;
+    margin-top: 30px;
+    font-family: sans-serif;
+    word-spacing: 10px;
+    margin-right: 20px;
+    text-decoration: none;
+    margin-left: 60px;
+}
+a:link {
+    color: black;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: #b60611;
+}
+
+/* selected link */
+a:active {
+    color:black;
+}
+#btn-social {
+    
+    width: 90px;
+    position: relative;
+    transition: 0.3s ease;
+    cursor: pointer;
+    opacity: 1;
+    height: 20px;
+    
+}
+
+#btn-social:hover {
+    transform: scale(1.5, 0.75); /** default is 1, scale it to 1.5 */
+    opacity: 0.5;
+    margin-left: 15px;
+}
+
+
+#sidebar1{
+    width: 300px;
+    height: 14800px;
+    background-color: white;
+    margin: 0;
+    float: left;
+    font-size:13pt;
+    border-right-color: #b60611;
+    border-right-style:solid;
+    padding-left: 0px;
+    margin-left: -30px
+}
+#sidebar1 ul li{
+    list-style: none;
+    padding-right:10px; 
+    height: 50px;
+    width: 250px;
+    padding-top:20px;
+    transition: 300ms;
+}
+#sidebar1 ul li:hover{
+    color:  #b60611;
+    height: 50px;
+    width: 250px;
+    font-size: 20px;
+    background-color: white;
+}
+#rightbar{
+    width: 1030px;
+    height: 100%;
+    margin-left: 220px;
+    padding-left: 70px;
+}
+h1{
+    color: black;
+    font-size: 30px;
+    }
+h2{
+    color: #b60611;
+    font-size: 25px;
+    font-weight: bold;
+}
+h3{
+    color:black;
+    font-size: 20px;
+}
+#rightbar ul li{
+    margin-left: 35px;
+    padding-left: 0px;
+}
+   #onclick-menu {
+    position: relative;
+    display: inline-block;
+}
+#onclick-menu:before {
+    content: "click me!";
+}
+#onclick-menu:focus {
+    /* clicking on label should toggle the menu */
+    pointer-events: none;
+}
+#onclick-menu:focus .onclick-menu-content {
+    /*  opacity is 1 in opened state (see below) */
+    opacity: 1;
+    visibility: visible;
+
+    /* don't let pointer-events affect descendant elements */
+    pointer-events: auto;
+}
+#onclick-menu-content {
+    position: absolute;
+    z-index: 1;
+
+    /* use opacity to fake immediate toggle */
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.5s;
+}
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #d3c6c6;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: 7ms;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
